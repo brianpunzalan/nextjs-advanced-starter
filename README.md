@@ -88,7 +88,7 @@ For our case, below should summarize our expectation:
 
 ## Deploy Options
 
-[![Deploy to Vercel](public/static/icons/deploy-vercel.svg)](https://vercel.com/import/project?template=https://github.com/brianpunzalan/nextjs-advanced-starter)
+[![Deploy to Vercel](icons/deploy-vercel.svg)](https://vercel.com/import/project?template=https://github.com/brianpunzalan/nextjs-advanced-starter)
 
 [Vercel](https://vercel.com/docs/v2/introduction) is a cloud platform for static sites and Serverless Functions. It enables developers to host JAMstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with no configuration.
 
