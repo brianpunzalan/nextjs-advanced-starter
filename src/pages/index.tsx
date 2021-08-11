@@ -9,7 +9,6 @@ import Page from '../types/Page';
 import Button from '../components/Button';
 
 interface Props {
-  name: string;
   page: Page;
 }
 
@@ -18,27 +17,24 @@ interface ServerSideProps {
 }
 
 const HomePage: NextPage<Props> = (props) => {
-  const { name, page } = props;
+  const { page } = props;
   return (
     <Providers page={page}>
       <DefaultLayout>
         <Button variant="contained" color="primary">
-          {name}
+          Click me
         </Button>
       </DefaultLayout>
     </Providers>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = (context) => {
-  const { query } = context;
+export const getServerSideProps: GetServerSideProps = () => {
   const reduxStore = initializeStore();
   const initialStore = reduxStore.getState() as RootState;
-  const name = (query.name ?? 'Customer') as string;
 
   const serverSideProps: ServerSideProps = {
     props: {
-      name,
       page: {
         initialStore,
       },
@@ -49,7 +45,6 @@ export const getServerSideProps: GetServerSideProps = (context) => {
 };
 
 HomePage.propTypes = {
-  name: PropTypes.string.isRequired,
   page: PropTypes.any.isRequired,
 };
 

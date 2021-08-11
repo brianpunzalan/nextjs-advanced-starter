@@ -4,7 +4,7 @@ import MuiButton, { ButtonProps } from '@material-ui/core/Button';
 import { makeStyles, createStyles } from '@material-ui/styles';
 import { Theme } from '../../theme';
 
-interface Props extends ButtonProps {}
+type Props = ButtonProps;
 
 const useMuiStyles = makeStyles((theme: Theme) =>
   createStyles({

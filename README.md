@@ -42,10 +42,55 @@ yarn lint
 
 ## Test
 
-To run `jest` test cases, execute
+To run `jest` unit test cases, execute
+
+```bash
+yarn test:unit
+```
+
+To run `typescript` type checking, execute
+
+```bash
+yarn test:type
+```
+
+To run `prettier` format check, execute
+
+```bash
+yarn format:check
+```
+
+To run `eslint` lint check, execute
+
+```bash
+yarn lint
+```
+
+To run all tests including code formating, linting, unit testing, and type checking, execute
 
 ```bash
 yarn test
+```
+
+## Build
+
+To prepare for production deployment, execute
+
+```bash
+yarn build
+yarn start
+```
+
+For Docker deployments, you could build the image by executing
+
+```bash
+docker build -t nextjs-advanced-starter:latest .
+```
+
+Run the image
+
+```bash
+docker run -it -p 3000:3000 nextjs-advanced-starter:latest
 ```
 
 ## Storybook
